@@ -1,0 +1,510 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #f5f5f7;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+/* Header Styling */
+header {
+    width: 80%;
+    height: 62px;
+    background-color: #23315A;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 54px;
+    border-radius: 20px;
+    z-index: 100;
+    padding: 0 20px;
+    
+}
+
+.logo {
+    font-size: 24px;
+    color: white;
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-right: 30px;
+    font-size: 18px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #2979FF;
+}
+
+/* Home Section */
+.home {
+    background-color: #f5f5f7;
+    min-height: 676px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 120px;
+}
+
+.hero {
+    width: 80%;
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 132px;
+    padding-bottom: 60px;
+}
+
+.hero h1 {
+    font-size: 56px;
+    font-weight: 700;
+    text-align: center;
+    color: #1E3A5F;
+    line-height: 1.2;
+}
+
+.hero ul {
+    list-style: none;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 15px;
+}
+
+.hero ul li {
+    font-size: 24px;
+    font-family: 'Shippori Antique B1', sans-serif;
+    color: #4a4a4a;
+}
+
+.hero button {
+    background-color: #2979FF;
+    border-radius: 20px;
+    width: 250px;
+    height: 66px;
+    align-self: center;
+    font-size: 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(41, 121, 255, 0.3);
+}
+
+.hero button:hover {
+    background-color: #1c68e3;
+    transform: translateY(-2px);
+}
+
+/* Review Section */
+.review {
+    display: flex;
+    background-color: #23315A;
+    height: 65px;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    gap: 15px;
+}
+
+.rating-number {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.stars {
+    display: flex;
+}
+
+.star {
+    font-size: 24px;
+    color: #ccc;
+}
+
+.star.filled {
+    color: gold;
+}
+
+.star.half-filled {
+    position: relative;
+    color: #ccc;
+}
+
+.star.half-filled::before {
+    content: "★";
+    position: absolute;
+    color: gold;
+    width: 50%;
+    overflow: hidden;
+}
+
+.rating-source {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Who Are We Section */
+.who-are-we {
+    background-color: #2979FF;
+    color: white;
+    padding: 60px 0;
+}
+
+.who-are-we .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.content-left {
+    flex: 1;
+}
+
+.content-left h2 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.content-left p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.rocket {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+.video-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.video-player {
+    background-color: #333;
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.video-controls {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.progress-bar {
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-bottom: 5px;
+    border-radius: 2px;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 50%;
+    background-color: #2979FF;
+    border-radius: 2px;
+}
+
+.time {
+    font-size: 12px;
+    color: white;
+    text-align: right;
+}
+
+/* Key Benefits Section */
+.key-benefits {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.key-benefits h2 {
+    text-align: center;
+    font-size: 50px;
+    color: #23315A;
+    margin-bottom: 40px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.benefit-card {
+    background-color: #23315A;
+    border-radius: 10px;
+    padding: 30px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #FFD700;
+}
+
+.benefit-card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #f5f5f7;
+    padding: 60px 0;
+}
+
+.testimonials h2 {
+    text-align: center;
+    font-size: 50px;
+    color: #23315A;
+    margin-bottom: 40px;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.testimonial-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.user-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.testimonial-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #23315A;
+}
+
+.user-role {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.user-comment {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* FAQ Section */
+.faq {
+    background-color: #23315A;
+    color: white;
+    padding: 60px 0;
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.faq-item h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* CTA Section */
+.cta {
+    background-color: white;
+    padding: 60px 0;
+}
+
+.cta-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cta-text h2 {
+    font-size: 28px;
+    color: #23315A;
+    margin-bottom: 10px;
+}
+
+.cta-text p {
+    font-size: 18px;
+    color: #666;
+}
+
+.cta-button {
+    background-color: #2979FF;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #1c68e3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(41, 121, 255, 0.3);
+}
+
+/* Footer */
+footer {
+    background-color: #2979FF;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-column ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-column ul li {
+    font-size: 14px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    body {
+    background-color: lightgreen;
+    }
+    }
