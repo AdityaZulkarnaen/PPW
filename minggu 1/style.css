@@ -14,13 +14,14 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 0;
+    padding: 40px 20px;
 }
 
 /* Header Styling */
 header {
-    width: 80%;
-    height: 62px;
+    width: 90%;
+    height: auto;
+    min-height: 62px;
     background-color: #23315A;
     display: flex;
     flex-direction: row;
@@ -29,17 +30,15 @@ header {
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 54px;
+    margin-top: 20px;
     border-radius: 20px;
     z-index: 100;
-    padding: 0 20px;
-    
+    padding: 15px 20px;
 }
 
 .logo {
     font-size: 24px;
     color: white;
-    margin-left: 30px;
     font-weight: bold;
 }
 
@@ -47,9 +46,8 @@ header {
     list-style: none;
     display: flex;
     flex-direction: row;
-    gap: 30px;
-    margin-right: 30px;
-    font-size: 18px;
+    gap: 20px;
+    font-size: 16px;
 }
 
 .navbar ul li a {
@@ -62,31 +60,38 @@ header {
     color: #2979FF;
 }
 
+/* Mobile menu toggle */
+.menu-toggle {
+    display: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
 /* Home Section */
 .home {
     background-color: #f5f5f7;
-    min-height: 676px;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-top: 120px;
+    padding-top: 100px;
 }
 
 .hero {
-    width: 80%;
+    width: 90%;
     max-width: 900px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 30px;
-    margin-top: 132px;
-    padding-bottom: 60px;
+    padding: 20px 0 60px;
 }
 
 .hero h1 {
-    font-size: 56px;
+    font-size: 42px;
     font-weight: 700;
     text-align: center;
     color: #1E3A5F;
@@ -103,7 +108,7 @@ header {
 }
 
 .hero ul li {
-    font-size: 24px;
+    font-size: 18px;
     font-family: 'Shippori Antique B1', sans-serif;
     color: #4a4a4a;
 }
@@ -111,10 +116,10 @@ header {
 .hero button {
     background-color: #2979FF;
     border-radius: 20px;
-    width: 250px;
-    height: 66px;
+    width: 220px;
+    height: 56px;
     align-self: center;
-    font-size: 20px;
+    font-size: 18px;
     color: white;
     border: none;
     cursor: pointer;
@@ -133,7 +138,7 @@ header {
 .review {
     display: flex;
     background-color: #23315A;
-    height: 65px;
+    padding: 15px 0;
     justify-content: center;
     align-items: center;
 }
@@ -144,6 +149,7 @@ header {
     justify-content: center;
     color: white;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 .rating-number {
@@ -194,22 +200,26 @@ header {
     justify-content: space-between;
     align-items: center;
     gap: 40px;
+    flex-direction: column;
 }
 
 .content-left {
     flex: 1;
+    width: 100%;
 }
 
 .content-left h2 {
-    font-size: 50px;
+    font-size: 36px;
     font-weight: 700;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .content-left p {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.6;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .rocket {
@@ -221,62 +231,14 @@ header {
     flex: 1;
     display: flex;
     justify-content: center;
+    width: 100%;
+    max-width: 560px;
 }
 
-.video-player {
-    background-color: #333;
+.video-container iframe {
     width: 100%;
-    max-width: 500px;
     aspect-ratio: 16/9;
     border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-}
-
-.play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60px;
-    height: 60px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.video-controls {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-}
-
-.progress-bar {
-    height: 4px;
-    background-color: rgba(255, 255, 255, 0.3);
-    margin-bottom: 5px;
-    border-radius: 2px;
-}
-
-.progress-fill {
-    height: 100%;
-    width: 50%;
-    background-color: #2979FF;
-    border-radius: 2px;
-}
-
-.time {
-    font-size: 12px;
-    color: white;
-    text-align: right;
 }
 
 /* Key Benefits Section */
@@ -287,14 +249,14 @@ header {
 
 .key-benefits h2 {
     text-align: center;
-    font-size: 50px;
+    font-size: 36px;
     color: #23315A;
     margin-bottom: 40px;
 }
 
 .benefits-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
 }
 
@@ -336,14 +298,14 @@ header {
 
 .testimonials h2 {
     text-align: center;
-    font-size: 50px;
+    font-size: 36px;
     color: #23315A;
     margin-bottom: 40px;
 }
 
 .testimonial-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
 }
 
@@ -368,6 +330,7 @@ header {
     height: 80px;
     border-radius: 50%;
     margin-bottom: 15px;
+    object-fit: cover;
 }
 
 .testimonial-card h3 {
@@ -397,7 +360,7 @@ header {
 
 .faq h2 {
     text-align: center;
-    font-size: 50px;
+    font-size: 36px;
     margin-bottom: 40px;
 }
 
@@ -408,7 +371,7 @@ header {
 }
 
 .faq-item h3 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     margin-bottom: 10px;
 }
@@ -428,10 +391,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
 }
 
 .cta-text h2 {
-    font-size: 28px;
+    font-size: 24px;
     color: #23315A;
     margin-bottom: 10px;
 }
@@ -468,7 +434,7 @@ footer {
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 40px;
 }
 
@@ -503,8 +469,120 @@ footer {
     text-decoration: underline;
 }
 
-@media (min-width: 600px) and (max-width: 1024px) {
-    body {
-    background-color: lightgreen;
+/* Media Queries */
+@media (min-width: 768px) {
+    header {
+        width: 80%;
+        margin-top: 40px;
     }
+
+    .hero h1 {
+        font-size: 50px;
     }
+    
+    .hero ul li {
+        font-size: 22px;
+    }
+    
+    .hero button {
+        width: 250px;
+        height: 66px;
+        font-size: 20px;
+    }
+    
+    .who-are-we .container {
+        flex-direction: row;
+    }
+    
+    .content-left h2 {
+        font-size: 42px;
+        text-align: left;
+    }
+    
+    .content-left p {
+        text-align: left;
+    }
+    
+    .key-benefits h2, 
+    .testimonials h2, 
+    .faq h2 {
+        font-size: 42px;
+    }
+    
+    .cta-content {
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+
+    header{
+        justify-content: space-evenly;
+    }
+    
+    .logo {
+        font-size: 16px;
+        margin-right: 10px;
+    }
+
+    .navbar li {
+        width: min-content;
+    }
+    .navbar ul {
+        flex-direction: row;
+        font-size: 12px;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .hero {
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+    
+    .hero ul li {
+        font-size: 16px;
+    }
+    
+    .hero button {
+        width: 200px;
+        height: 50px;
+        font-size: 16px;
+    }
+    
+    .content-left h2,
+    .key-benefits h2,
+    .testimonials h2,
+    .faq h2 {
+        font-size: 28px;
+    }
+    
+    .rating {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .benefit-card,
+    .testimonial-card {
+        padding: 20px;
+    }
+    
+    .cta-text h2 {
+        font-size: 22px;
+    }
+    
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
