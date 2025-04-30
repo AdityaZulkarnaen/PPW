@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HireWay - Temukan Pekerjaan Impianmu</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Shippori+Antique+B1&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f7;
+        }
+        .navbar-custom {
+            background-color: #23315A;
+            border-radius: 20px;
+        }
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-heading {
+            color: #1E3A5F;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .hero-list {
+            font-family: 'Shippori Antique B1', sans-serif;
+            color: #4a4a4a;
+        }
+        .btn-primary-custom {
+            background-color: #2979FF;
+            border-color: #2979FF;
+        }
+        .btn-primary-custom:hover {
+            background-color: #1c68e3;
+            border-color: #1c68e3;
+        }
+        .review-section {
+            background-color: #23315A;
+        }
+        .who-are-we-section {
+            background-color: #2979FF;
+            color: white;
+        }
+        .benefit-card {
+            background-color: #23315A;
+            color: white;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+        .benefit-card h5 {
+            color: #FFD700;
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        .faq-section {
+            background-color: #23315A;
+            color: white;
+        }
+        .footer-section {
+            background-color: #2979FF;
+            color: white;
+        }
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top container mt-4 py-2">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">HireWay</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#who-are-we">Who Are We?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#key-benefits">Key Benefits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-10 col-lg-8 text-center py-5 mt-5">
+                        <h1 class="hero-heading display-4 mb-4">Temukan Pekerjaan Impianmu, Tanpa Ribet!</h1>
+                        <ul class="list-unstyled hero-list fs-5 mb-4">
+                            <li class="mb-2">✅ Lowongan Terbaru Setiap Hari</li>
+                            <li class="mb-2">✅ Filter Pekerjaan Sesuai Skill & Lokasi</li>
+                            <li class="mb-2">✅ Proses Lamar Cepat & Mudah</li>
+                        </ul>
+                        <button class="btn btn-primary btn-primary-custom btn-lg rounded-pill px-4 py-3 fw-semibold shadow">
+                            Lamar Sekarang!
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Review Section -->
+        <div class="review-section py-3">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-auto text-center text-white">
+                        <div class="d-flex align-items-center">
+                            <span class="fs-4 fw-semibold me-3">4.5</span>
+                            <div class="me-3">
+                                <span class="text-warning">★★★★</span><span class="text-warning opacity-50">★</span>
+                            </div>
+                            <span class="fs-5">Google Review</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Who Are We Section -->
+        <section id="who-are-we" class="who-are-we-section py-5">
+            <div class="container py-4">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h2 class="display-5 fw-bold mb-4 text-center text-lg-start">Who Are We?</h2>
+                        <p class="fs-5 mb-3 text-center text-lg-start">
+                            <span class="fs-4">🚀</span> Menghubungkan Talenta dengan Peluang Terbaik!
+                        </p>
+                        <p class="fs-5 text-center text-lg-start">
+                            Kami adalah HireWay, platform yang membantu pencari kerja menemukan kesempatan karier yang sesuai dengan keahlian dan minat mereka.
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="ratio ratio-16x9 rounded">
+                            <iframe src="https://www.youtube.com/embed/xvFZjo5PgG0" 
+                                title="YouTube video player" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Benefits Section -->
+        <section id="key-benefits" class="bg-white py-5">
+            <div class="container py-4">
+                <h2 class="display-5 fw-bold text-center mb-5" style="color: #23315A;">Key Benefits / Feature</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="benefit-card rounded-4 p-4 shadow-sm h-100">
+                            <div class="fs-3 mb-3">🔍</div>
+                            <h5 class="fw-bold mb-3">Smart Search</h5>
+                            <p>Dapatkan lowongan kerja yang sesuai dengan keahlian, pengalaman, dan minat Anda secara otomatis.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="benefit-card rounded-4 p-4 shadow-sm h-100">
+                            <div class="fs-3 mb-3">👆</div>
+                            <h5 class="fw-bold mb-3">One Click Apply</h5>
+                            <p>Proses pendaftaran mudah tanpa ribet. Kirim lamaran hanya dalam satu klik!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="benefit-card rounded-4 p-4 shadow-sm h-100">
+                            <div class="fs-3 mb-3">🏢</div>
+                            <h5 class="fw-bold mb-3">Top Notch Companies</h5>
+                            <p>Kami bekerja sama dengan perusahaan ternama untuk menghadirkan peluang karier berkualitas.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="benefit-card rounded-4 p-4 shadow-sm h-100">
+                            <div class="fs-3 mb-3">📈</div>
+                            <h5 class="fw-bold mb-3">Career Dashboard</h5>
+                            <p>Pantau status lamaran dan dapatkan wawasan untuk meningkatkan peluang diterima.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="benefit-card rounded-4 p-4 shadow-sm h-100">
+                            <div class="fs-3 mb-3">📊</div>
+                            <h5 class="fw-bold mb-3">Career Tips & Tricks</h5>
+                            <p>Akses artikel, webinar, dan pelatihan eksklusif untuk meningkatkan keterampilan dan kesiapan kerja Anda.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="benefit-card rounded-4 p-4 shadow-sm h-100">
+                            <div class="fs-3 mb-3">🔔</div>
+                            <h5 class="fw-bold mb-3">Real-times Notifications</h5>
+                            <p>Dapatkan update terbaru tentang lowongan kerja yang sesuai langsung ke email atau aplikasi Anda.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-5 bg-light">
+            <div class="container py-4">
+                <h2 class="display-5 fw-bold text-center mb-5" style="color: #23315A;">Customer Testimonials</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="testimonial-card bg-white rounded-4 p-4 text-center shadow-sm">
+                            <img src="assets/zufar.png" alt="" class="rounded-circle mb-3" width="80" height="80">
+                            <h5 class="fw-bold" style="color: #23315A;">Ambartholemew</h5>
+                            <p class="text-muted mb-3">Google - DevOps Engineer</p>
+                            <p>Great place to apply your resume</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="testimonial-card bg-white rounded-4 p-4 text-center shadow-sm">
+                            <img src="assets/ancung.png" alt="" class="rounded-circle mb-3" width="80" height="80">
+                            <h5 class="fw-bold" style="color: #23315A;">Shim Matts</h5>
+                            <p class="text-muted mb-3">Netflix - Software Engineer</p>
+                            <p>Saya apply hanya 2 hari langsung mendapat interview</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="testimonial-card bg-white rounded-4 p-4 text-center shadow-sm">
+                            <img src="assets/icad.png" alt="" class="rounded-circle mb-3" width="80" height="80">
+                            <h5 class="fw-bold" style="color: #23315A;">Jaka Nglempong</h5>
+                            <p class="text-muted mb-3">Yamaha - Manager</p>
+                            <p>Saya orangnya gaptek tapi tidak bingung saat lamar di sini</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="testimonial-card bg-white rounded-4 p-4 text-center shadow-sm">
+                            <img src="assets/wikan.png" alt="" class="rounded-circle mb-3" width="80" height="80">
+                            <h5 class="fw-bold" style="color: #23315A;">Mafi Ashoulawatt</h5>
+                            <p class="text-muted mb-3">Apple - Product Tester</p>
+                            <p>Fitur lengkap dan canggih membuat resume ku tepat sasaran</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section py-5">
+            <div class="container py-4">
+                <h2 class="display-5 fw-bold text-center mb-5">Frequently Asked Questions</h2>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item mb-3 border-0">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed fw-semibold bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                                Q: Apa itu HireWay?
+                            </button>
+                        </h3>
+                        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body bg-dark text-white">
+                                A: HireWay adalah platform inovatif yang membantu pencari kerja menemukan peluang terbaik dengan sistem pencocokan cerdas, rekomendasi personal, dan berbagai sumber daya karier yang membantu Anda sukses dalam dunia kerja.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item mb-3 border-0">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed fw-semibold bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                Q: Apakah layanan ini berbayar?
+                            </button>
+                        </h3>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body bg-dark text-white">
+                                A: Tidak, layanan dasar kami gratis untuk pencari kerja. Namun, kami juga menawarkan fitur premium yang memberikan akses lebih luas ke lowongan eksklusif, tips wawancara, dan konsultasi karier.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item mb-3 border-0">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed fw-semibold bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                Q: Bagaimana cara mendaftar dan mulai mencari pekerjaan?
+                            </button>
+                        </h3>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body bg-dark text-white">
+                                A: Anda cukup membuat akun, mengisi profil, dan mengunggah CV. Setelah itu, Anda bisa mulai mencari pekerjaan berdasarkan kategori, lokasi, atau rekomendasi personal yang disediakan sistem kami.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item mb-3 border-0">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed fw-semibold bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                Q: Apakah bisa mengedit informasi profile setelah mendaftar?
+                            </button>
+                        </h3>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body bg-dark text-white">
+                                A: Ya! Anda bisa memperbarui informasi profil, mengunggah CV terbaru, dan menyesuaikan preferensi pekerjaan kapan saja untuk meningkatkan peluang mendapatkan pekerjaan yang sesuai.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-white py-5">
+            <div class="container py-4">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="fw-bold mb-3" style="color: #23315A;">🚀 Siap Mulai Karier Baru?</h2>
+                        <p class="fs-5 text-muted mb-4">Bergabung sekarang dan temukan pekerjaan terbaik untukmu!</p>
+                        <button class="btn btn-primary btn-primary-custom btn-lg rounded-pill px-4 py-3 fw-semibold shadow">
+                            Daftar Sekarang
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-section py-5">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-md-4">
+                    <h5 class="fw-semibold mb-3">About company</h5>
+                    <p>Work listing company for people with great and very bright future career.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-semibold mb-3">Contact Information</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="far fa-envelope me-2"></i> info@HireWay.com</li>
+                        <li class="mb-2"><i class="fas fa-mobile-alt me-2"></i> +(62) 8431 3849 23</li>
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Jl. Godean Km. 5, Yogyakarta</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-semibold mb-3">Legal Pages</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Terms of use</a></li>
+                        <li class="mb-2"><a href="#">Disclaimer</a></li>
+                        <li class="mb-2"><a href="#">Privacy policy</a></li>
+                        <li class="mb-2"><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
