@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Output JavaScript</title>
+</head>
+<body>
+  <h1>Contoh Output dari JavaScript</h1>
+
+  <p id="output-innerHTML">Output innerHTML: </p>
+
+  <!-- Kontainer untuk menampung elemen tambahan -->
+  <div id="container"></div>
+
+  <button onclick="tambahElemen()">Klik untuk Tambah</button>
+
+  <script>
+    // Output awal
+    console.log("Ini adalah output dari console.log");
+    alert("Ini adalah output dari alert");
+    document.getElementById("output-innerHTML").innerHTML += "Ini dari innerHTML";
+
+    // Fungsi untuk menambah elemen ke bawah
+    function tambahElemen() {
+      const container = document.getElementById("container");
+      const paragraf = document.createElement("p");
+      paragraf.textContent = "Ini paragraf baru dari tombol";
+      container.appendChild(paragraf);
+    }
+  </script>
+</body>
+</html>

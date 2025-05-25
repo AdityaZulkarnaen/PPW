@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Penjumlahan</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px 12px;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="tanyaKonfirmasi()">Click Aku!</button>
+
+  <table id="hasilTabel" style="display:none;">
+    <thead>
+      <tr>
+        <th>Bilangan 1</th>
+        <th>Bilangan 2</th>
+        <th>Hasil</th>
+      </tr>
+    </thead>
+    <tbody id="tabelBody">
+    </tbody>
+  </table>
+
+  <script>
+    function tanyaKonfirmasi() {
+      const lanjut = confirm("Mau lanjut atau tidak?");
+      if (!lanjut) {
+        alert("Anda tidak lanjut");
+        document.write("Anda tidak lanjut");
+        console.log("Anda tidak lanjut");
+        return;
+      }
+
+      let x = prompt("Masukkan bilangan 1:");
+      if (x === null) {
+        alert("Anda berhenti dan tidak memasukkan bilangan 1");
+        document.write("Anda berhenti dan tidak memasukkan bilangan 1");
+        return;
+      } else if (isNaN(x)) {
+        alert("Input bukan angka!");
+        return;
+      }
+
+      let y = prompt("Masukkan bilangan 2:");
+      if (y === null) {
+        alert("Anda hanya menginput bilangan 1, bilan 2 tidak anda inputkan!");
+        document.write("Anda hanya menginput bilangan 1, bilan 2 tidak anda inputkan!");
+        console.log("Anda hanya menginput bilangan 1, bilan 2 tidak anda inputkan!");
+        return;
+      } else if (isNaN(y)) {
+        alert("Input bukan angka!");
+        return;
+      }
+
+      let hasil = parseFloat(x) + parseFloat(y);
+      alert("Hasil penjumlahan: " + hasil);
+
+      const tabel = document.getElementById("hasilTabel");
+      const tbody = document.getElementById("tabelBody");
+      tabel.style.display = "table";
+
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${x}</td>
+        <td>${y}</td>
+        <td>${hasil}</td>
+      `;
+      tbody.appendChild(row);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript dengan Inline, Embed, dan Eksternal</title>
+
+  <script>
+    function sayHelloFromEmbed() {
+      alert("Halo dari script yang di-embed!");
+    }
+  </script>
+
+  <script src="/tugas/semester 2/PPW/tugas 5/external.js"></script>
+</head>
+<body>
+  <h1>Contoh Penggunaan JavaScript dari Berbagai Sumber</h1>
+
+  <button onclick="alert('Halo dari script inline!')">Klik Inline</button>
+  <br><br>
+
+  <button onclick="sayHelloFromEmbed()">Klik Embed</button>
+  <br><br>
+
+  <button onclick="sayHelloFromExternal()">Klik Eksternal</button>
+</body>
+</html>
